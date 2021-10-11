@@ -29,6 +29,9 @@ class Game
         puts "Seriously? No!"
         player.decrement_game_lives
       end
+
+      # display remaining lives of players
+      puts "P1: #{@player1.game_lives}/3 vs. P2: #{@player2.game_lives}/3"
     end
     puts "Good bye!"
   end
