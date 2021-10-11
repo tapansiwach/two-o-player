@@ -8,9 +8,10 @@ class Game
     @player2 = Player.new
     @questionNumber = 0
   end
-
+  
   def loop
     while (@player1.game_lives > 0 && @player2.game_lives > 0)
+      puts "---------NEW TURN------------"
       # check whose turn is it
       player = @questionNumber % 2 == 0 ? @player1 : @player2
 
@@ -33,6 +34,12 @@ class Game
 
       # display remaining lives of players
       puts "P1: #{@player1.game_lives}/3 vs. P2: #{@player2.game_lives}/3"
+    end
+    puts "---------GAME OVER------------"
+    if @player1.game_lives == 0
+      puts "Player 2 wins with a score of #{@player2.game_lives}/3"
+    else
+      puts "Player 1 wins with a score of #{@player1.game_lives}/3"
     end
     puts "Good bye!"
   end
