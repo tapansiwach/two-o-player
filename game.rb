@@ -9,7 +9,7 @@ class Game
     @questionNumber = 0
   end
 
-  def game_loop
+  def loop
     while (@player1.game_lives > 0 && @player2.game_lives > 0)
       # check whose turn is it
       player = @questionNumber % 2 == 0 ? @player1 : @player2
