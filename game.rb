@@ -19,6 +19,16 @@ class Game
       print "Player"
       print player == player1 ? " 1: " : " 2: "
       puts question.pose
+
+      # get user's answer and check if it is correct
+      # if answer is incorrect, decrement player's game_lives
+      userAnswer = gets.chomp.to_i
+      if userAnswer == question.answer
+        puts "YES! You are correct"
+      else
+        puts "Seriously? No!"
+        player.decrement_game_lives
+      end
     end
     puts "Good bye!"
   end
