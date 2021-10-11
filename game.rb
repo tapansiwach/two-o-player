@@ -19,6 +19,7 @@ class Game
       print "Player"
       print player == @player1 ? " 1: " : " 2: "
       puts question.pose
+      @questionNumber += 1
 
       # get user's answer and check if it is correct
       # if answer is incorrect, decrement player's game_lives
